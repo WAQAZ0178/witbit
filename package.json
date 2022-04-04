@@ -1,0 +1,59 @@
+{
+  "name": "Diviy",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "npx react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "debug": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res",
+    "clean": "cd android && ./gradlew clean",
+    "apk": "cd android && ./gradlew assembleRelease -x bundleReleaseJsAndAssets",
+    "dapk": "cd android && ./gradlew assembleDebug -x bundleDebugJsAndAssets",
+    "bundle": "cd android && ./gradlew bundleRelease -x bundleReleaseJsAndAssets",
+    "release": "cd android && ./gradlew :app:assembleRelease",
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.16.3",
+    "@react-native-community/datetimepicker": "^6.0.2",
+    "@react-native-picker/picker": "^2.4.0",
+    "@react-navigation/bottom-tabs": "^6.0.9",
+    "@react-navigation/drawer": "^6.3.1",
+    "@react-navigation/native": "^6.0.8",
+    "@react-navigation/stack": "^6.1.1",
+    "axios": "^0.26.1",
+    "moment": "^2.29.1",
+    "react": "17.0.2",
+    "react-native": "0.67.3",
+    "react-native-confirmation-code-field": "^7.3.0",
+    "react-native-dropdownalert": "^4.5.1",
+    "react-native-gesture-handler": "^1.8.0",
+    "react-native-image-picker": "^4.7.3",
+    "react-native-modal": "^13.0.1",
+    "react-native-modal-datetime-picker": "^13.1.0",
+    "react-native-reanimated": "^1.13.2",
+    "react-native-safe-area-context": "^4.2.1",
+    "react-native-screens": "^3.13.1",
+    "react-native-svg": "^12.3.0",
+    "react-native-vector-icons": "^9.1.0",
+    "react-redux": "^7.2.6",
+    "redux": "^4.1.2",
+    "redux-thunk": "^2.4.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.7",
+    "@babel/runtime": "^7.17.7",
+    "@react-native-community/eslint-config": "^3.0.1",
+    "babel-jest": "^27.5.1",
+    "eslint": "^8.11.0",
+    "jest": "^27.5.1",
+    "metro-react-native-babel-preset": "^0.69.1",
+    "react-native-svg-transformer": "^1.0.0",
+    "react-test-renderer": "17.0.2"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
